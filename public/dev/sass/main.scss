@@ -43,7 +43,7 @@
 
 @media (min-width: 650px) {
   .mega {
-    font-size: 6rem;
+    font-size: 10rem;
     line-height: 1;
   }
 }
@@ -90,7 +90,6 @@ html {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   width: 100%;
-
   overflow: hidden-x;
 
   /* Centering in The Unknown */
@@ -98,9 +97,7 @@ html {
 }
 
 @media (min-width: 650px) {
-  html {
-    height: 100%;
-  }
+
 
   html:before {
     content: '';
@@ -113,7 +110,6 @@ html {
   body {
     display: inline-block;
     vertical-align: middle;
-    max-width: 64.9rem;
   }
 }
 
@@ -188,3 +184,4 @@ html {
 .bounceInUp {
   animation-name: bounceInUp;
 }
+
