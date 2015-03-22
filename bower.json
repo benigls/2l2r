@@ -1,0 +1,14 @@
+{
+  "name": "2l2r",
+  "version": "0.0.0",
+  "homepage": "https://github.com/igop/2l2r",
+  "moduleType": [
+    "node"
+  ],
+  "license": "GPL-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}
