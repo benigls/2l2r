@@ -67,7 +67,8 @@ module.exports = function(grunt){
                 tasks: 'sass'
             },
             ejs: {
-                files: 'views/**'
+                files: 'views/*.ejs',
+                files: 'vies/**/*.ejs'
             }
         }
 	});

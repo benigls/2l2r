@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { name: 'Ben' });
+  res.render('index', { title: '2L2R: Terms and Condition Analyzer' });
 });
 
 module.exports = router;
