@@ -70,14 +70,6 @@ module.exports = function(grunt){
                 files: 'views/*.ejs',
                 files: 'vies/**/*.ejs'
             }
-        },
-        notify: {
-            build: {
-                message: 'Build is Ready'
-            },
-            server: {
-                message: 'Server is Ready'
-            }
         }
 	});
 	
@@ -92,13 +84,11 @@ module.exports = function(grunt){
         'uglify',
         'copy',
         'sass',
-        'jshint',
-        'notify:build'
+        'jshint'
     ]);
     grunt.registerTask('default', [
         'build',
-        'watch',
-        'notify:server'
+        'watch'
     ]);
 };
 
