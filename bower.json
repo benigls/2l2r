@@ -11,6 +11,10 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.4"
-  }
+    "bootstrap": "~3.3.4",
+    "jquery": "~1.9.1"
+  },
+  "authors": [
+    "Jose San Juan <sanjuanjojo@gmail.com>"
+  ]
 }
