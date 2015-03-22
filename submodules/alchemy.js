@@ -9,7 +9,7 @@ var Alchemy = function () {
 
 		alchemy.text(url, {}, function(err, response) {
 	  		if (!err) {
-	  			content = response;
+	  			content = response.text;
 	  		}
 		});
 
