@@ -35,3 +35,6 @@ public/build
 
 #SASS cache
 .sass-cache
+
+#API Keys
+api-keys.json
