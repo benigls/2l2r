@@ -14,7 +14,6 @@
     "express": "~4.12.2",
     "js2xmlparser": "^0.1.9",
     "morgan": "~1.5.1",
-    "q": "^1.2.0",
     "serve-favicon": "~2.2.0"
   },
   "devDependencies": {
