@@ -1,4 +1,5 @@
 var fs = require('fs'),
+	js2xmlparser = require('js2xmlparser'),
 	hypotheses = require('./data/hypotheses');
 
 var XML = function () {
@@ -21,15 +22,16 @@ var XML = function () {
 					'task': 'IE'
 				},
 				't': text,
-				'h': hypotheses[i].hypothesis;
+				'h': hypotheses[i].hypothesis
 			};
 		}
 
 		xml = js2xmlparser('entailment-corpus', templateXML);
+		saveXML(xml);
 	};
 
 	var saveXML = function (data) {
-		fs.writeFile("/tmp/data.xml", data, function (err) {
+		fs.writeFile("/tmp/input.xml", data, function (err) {
 			if (err) {
 				return console.log(err);
 			}
