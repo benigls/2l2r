@@ -17,6 +17,7 @@ $(document).ready(function(){
 
 });
 
+
 var addBinders = function addBinders() {
 	$('.form form').find('input').on('focus', function(){
 		var content = $(this).val();
