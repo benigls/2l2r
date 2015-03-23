@@ -84,7 +84,7 @@ hr {
   $BASE
 \*-----------------------------------*/
 
-html {
+.island {
   font: 100%/1.5 "Roboto", Verdana, sans-serif;
   color: #3d464d;
   background-color: #fff;
@@ -92,22 +92,19 @@ html {
   width: 100%;
   overflow: hidden-x;
 
-  /* Centering in The Unknown */
+  
   text-align: center;
 }
 
 @media (min-width: 650px) {
 
 
-  html:before {
+  .island {
     content: '';
     display: inline-block;
     height: 100%;
     vertical-align: middle;
     margin-right: -0.25em;
-  }
-
-  body {
     display: inline-block;
     vertical-align: middle;
   }
@@ -185,3 +182,24 @@ html {
   animation-name: bounceInUp;
 }
 
+.modal-static { 
+    position: fixed;
+    top: 50% !important; 
+    left: 50% !important; 
+    margin-top: -100px;  
+    margin-left: -100px; 
+    overflow: visible !important;
+}
+.modal-static,
+.modal-static .modal-dialog,
+.modal-static .modal-content {
+    width: 200px; 
+    height: 150px; 
+}
+.modal-static .modal-dialog,
+.modal-static .modal-content {
+    padding: 0 !important; 
+    margin: 0 !important;
+}
+.modal-static .modal-content .icon {
+}

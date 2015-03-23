@@ -1,11 +1,13 @@
-var tempVar = "Hello World!";
+var tempVar;
 
 
 $(document).ready(function(){
     $('button').click(function(){
+        setTimeout(function(){ 
         tempVar = $('#query').val();
         $('#test').text(tempVar);
-        console.log('okay');
+        $('#processing-modal').modal('hide') ;
+        }, 3000);
+
     });
 });
-console.log(tempVar);
