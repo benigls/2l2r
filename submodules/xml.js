@@ -3,7 +3,7 @@ var fs = require('fs'),
 	hypotheses = require('./data/hypotheses');
 
 var XML = function () {
-	this.generateXML = function (text) {
+	this.generateXML = function (text, callback) {
 		var length = hypotheses.length,
 			templateXML = {
 				'@': {
@@ -27,13 +27,15 @@ var XML = function () {
 		}
 
 		xml = js2xmlparser('entailment-corpus', templateXML);
-		saveXML(xml);
+		saveXML(xml, callback);
 	};
 
-	var saveXML = function (data) {
+	var saveXML = function (data, callback) {
 		fs.writeFile("/tmp/input.xml", data, function (err) {
 			if (err) {
 				return console.log(err);
+			} else {
+				callback.annotate();
 			}
 		});
 	};

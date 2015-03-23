@@ -1,5 +1,7 @@
 var fs = require('fs'),
-	xml = require('./xml');
+	xml = require('./xml'),
+	shell = require('./shell');
+
 
 var alchemyAPI = require('alchemy-api'),
 	apiKeys = require('../api-keys.json'),
@@ -17,8 +19,7 @@ function getContent(url) {
 }
 
 function callback(err, response) {
-	xml.generateXML(response.text);
+	xml.generateXML(response.text, shell);
 }
-
 
 getContent(url);
