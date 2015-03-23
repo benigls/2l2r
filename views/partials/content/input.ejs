@@ -1,19 +1,22 @@
 <main class="site__content island" role="content">
   <div class="wrap">
 
-  		
-	        <div class="col-md-14">
-	            <div id="custom-search-input" style="margin-bottom: 15%;">
-	                <div class="input-group col-md-12">
-	                    <input type="text" class="form-control input-lg" value="http://" id="query">
-	                    <span class="input-group-btn">
-	                        <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#processing-modal">
-	                        	GO
-	                        </button>
-	                    </span>
-	                </div>
-	            </div>
-	        </div>
+  		<div class="form">
+  			<form id="search">
+		        <div class="col-md-14">
+		            <div id="custom-search-input" style="margin-bottom: 15%;">
+		                <div class="input-group col-md-12">
+		                    <input type="text" class="form-control input-lg" placeholder="http://" id="query" autocomplete="off">
+		                    <span class="input-group-btn">
+		                        <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#processing-modal">
+		                        	GO
+		                        </button>
+		                    </span>
+		                </div>
+		            </div>
+		        </div>
+	        </form>
+  		</div>
 	    
 	    <!-- Static Modal -->
 			<div class="modal modal-static fade" id="processing-modal" role="dialog" aria-hidden="true">
