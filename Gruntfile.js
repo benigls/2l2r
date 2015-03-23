@@ -33,8 +33,8 @@ module.exports = function(grunt){
                 files: {
                     src: [
                         'app.js',
-                        'submodules/**',
-                        'routes/**'
+                        'submodules/*.js',
+                        'routes/*.js'
                     ]
                 }
             },
