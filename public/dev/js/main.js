@@ -1,4 +1,22 @@
 var tempVar;
+var res= [
+		    {
+		        "question": "Is my data being sold to third-parties?",
+		        "res": 1
+		    },
+		    {
+		        "question": "Is data transfered by this website encrypted?",
+		        "res": 0
+		    },
+		    {
+		        "question": "Does this website store my data even when it's no longer needed?",
+		        "res": 0
+		    },
+		    {
+		        "question": "Will advertisers have access to my data?",
+		        "res": 1
+		    }
+		];
 
 
 $(document).ready(function(){
@@ -9,7 +27,7 @@ $(document).ready(function(){
         tempVar = $('#query').val();
         
         setTimeout(function(){ 
-        $('#test').text(tempVar);
+        display(res);
         $('#processing-modal').modal('hide') ;
         }, 3000);
 
@@ -18,7 +36,7 @@ $(document).ready(function(){
 });
 
 
-var addBinders = function addBinders() {
+function addBinders() {
 	$('.form form').find('input').on('focus', function(){
 		var content = $(this).val();
 		if(content === "") {
@@ -32,3 +50,10 @@ var addBinders = function addBinders() {
 		}
 	});
 };
+
+function display(results){
+	$('#test').text(results.forEach(function(rez){
+		console.log(rez.question);
+		$('#test').append('<div class = "col-md-10 col-md-offset-1">' + rez.question + '</div>');
+	}));
+}
