@@ -25,7 +25,7 @@ $(document).ready(function(){
 
     $('button').click(function(){
         tempVar = $('#query').val();
-        
+        $('#test').text("");
         setTimeout(function(){ 
         display(res);
         $('#processing-modal').modal('hide') ;
@@ -52,8 +52,8 @@ function addBinders() {
 };
 
 function display(results){
-	$('#test').text(results.forEach(function(rez){
+	results.forEach(function(rez){
 		console.log(rez.question);
-		$('#test').append('<div class = "col-md-10 col-md-offset-1">' + rez.question + '</div>');
-	}));
+		$('#test').append('<div class = "col-md-10 col-md-offset-1">' + rez.question + ' '+ rez.res +'</div>');
+	});
 }
