@@ -2,7 +2,7 @@ var sh = require('shelljs');
 
 var Shell = function() {
 	var makeTemp = function() {
-		sh.mkdir('-p', ['/tmp/EN/dev', '/tmp/EN/test']);
+		sh.mkdir('-p', ['/tmp/EN/dev', '/tmp/EN/test', __dirname + '/data/eop']);
 	};
 
 	var cdToEOP = function () {
