@@ -18,7 +18,7 @@ var Shell = function() {
 			'-train',
 			'-trainFile ./eop-resources-1.2.1/data-set/English_dev.xml',
 			'-trainDir /tmp/EN/dev',
-			'-output ./eop-resources-1.2.1/results/res'
+			'-output ' + __dirname + '/data/eop/'
 		].join(' ');
 
 		cdToEOP();
@@ -36,9 +36,9 @@ var Shell = function() {
 			'-language EN',
 			'-model MaxEntClassificationEDA_Base+WN+TP+TPPos+TS_EN',
 			'-test',
-			'-testFile ' + __dirname + '/data/input.xml',
+			'-testFile ' + __dirname + '/data/eop/input.xml',
 			'-testDir /tmp/EN/test',
-			'-output ' + __dirname + '/data/'
+			'-output ' + __dirname + '/data/eop/'
 		].join(' ');
 
 		cdToEOP();
