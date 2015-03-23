@@ -57,8 +57,8 @@ module.exports = function(grunt){
             backendJS: {
                 files: [
                     'app.js',
-                    'submodules/**',
-                    'routes/**'
+                    'submodules/*.js',
+                    'routes/*.js'
                 ],
                 tasks: 'jshint:backendJS'
             },
