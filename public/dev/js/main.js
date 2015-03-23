@@ -29,7 +29,14 @@ var res= [
 
 $(document).ready(function(){
 	addBinders();
-    $('.form form query').focus();
+    
+    $('.form query').focus();
+
+    $("#query").keyup(function(event){
+    if(event.keyCode == 13){
+        $("button").click();
+	    }
+	});
 
     $('button').click(function(){
         tempVar = $('#query').val();
@@ -37,24 +44,23 @@ $(document).ready(function(){
         setTimeout(function(){ 
         display(res);
         EPPZScrollTo.scrollVerticalToElementById('footer', 20);
-        $('#processing-modal').modal('hide') ;
-        
-        }, 1000);
-        
+        $('#processing-modal').modal('hide');
+        }, 3500);
     });
+
 
 });
 
 
 function addBinders() {
-	$('.form form').find('input').on('focus', function(){
+	$('.form').find('input').on('focus', function(){
 		var content = $(this).val();
 		if(content === "") {
 			$(this).val("http://");
 		}
 	});
 
-	$('.form form').find('input').on('blur', function(){
+	$('.form').find('input').on('blur', function(){
 		if($(this).val() === "http://") {
 			$(this).val("");
 		}
