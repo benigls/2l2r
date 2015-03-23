@@ -1,8 +1,6 @@
 var sh = require('shelljs');
 
 var Shell = function() {
-	this.config = 'MaxEntClassificationEDAModel_Base+WN+TP+TPPos+TS_EN';
-
 	var makeTemp = function() {
 		sh.mkdir('-p', ['/tmp/EN/dev', '/tmp/EN/test']);
 	};
@@ -14,8 +12,9 @@ var Shell = function() {
 	var runTrain = function () {
 		var command = [
 			'java -Djava.ext.dirs=../EOP-1.2.1/ eu.excitementproject.eop.util.runner.EOPRunner',
-			'-config ./eop-resources-1.2.1/configuration-files/' + config + '.xml',
+			'-config ./eop-resources-1.2.1/configuration-files/MaxEntClassificationEDA_Base+WN+TP+TPPos+TS_EN.xml',
 			'-language EN',
+			'-eda cMaxEntClassificationEDA',
 			'-train',
 			'-trainFile ./eop-resources-1.2.1/data-set/English_dev.xml',
 			'-trainDir /tmp/EN/dev',
@@ -33,17 +32,17 @@ var Shell = function() {
 	var runAnnotate = function () {
 		var command = [
 			'java -Djava.ext.dirs=../EOP-1.2.1/ eu.excitementproject.eop.util.runner.EOPRunner',
-			'-config ./eop-resources-1.2.1/configuration-files/' + config + '.xml',
+			'-config ./eop-resources-1.2.1/configuration-files/MaxEntClassificationEDA_Base+WN+TP+TPPos+TS_EN.xml',
 			'-language EN',
-			'-model ' + config,
+			'-model MaxEntClassificationEDA_Base+WN+TP+TPPos+TS_EN',
 			'-test',
-			'-testFile /tmp/input.xml',
+			'-testFile ' + __dirname + '/data/input.xml',
 			'-testDir /tmp/EN/test',
-			'-output ./eop-resources-1.2.1/results/res'
+			'-output ' + __dirname + '/data/'
 		].join(' ');
 
 		cdToEOP();
-		
+
 		if (sh.exec(command).code !== 0) {
   			sh.echo('EOP stops');
   			sh.exit(1);
