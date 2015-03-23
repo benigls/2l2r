@@ -1,25 +1,26 @@
 var fs = require('fs'),
 	xml = require('./xml'),
-	shell = require('./shell');
-
+	shell = require('./shell'),
+	json = require('./json');
 
 var alchemyAPI = require('alchemy-api'),
 	apiKeys = require('../api-keys.json'),
 	alchemyApiKey = apiKeys[0].key,
 	alchemy = new alchemyAPI(alchemyApiKey);
 
-var url = 'https://twitter.com/privacy?lang=en';
 
-function getContent(url) {
-	var alchemyApiKey = apiKeys[0].key,
-		alchemy = new alchemyAPI(alchemyApiKey),
-		content;
 
-	alchemy.text(url, {}, callback);
-}
 
-function callback(err, response) {
-	xml.generateXML(response.text, shell);
-}
+var AI = function () {
+	var callback = function (err, response) {
+		xml.generateXML(response.text, shell);
+		return json.getResult();
+	};
 
-getContent(url);
+	this.run = function (url) {
+		var alchemyApiKey = apiKeys[0].key,
+			alchemy = new alchemyAPI(alchemyApiKey);
+
+		alchemy.text(url, {}, callback);
+	};
+};
