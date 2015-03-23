@@ -1,7 +1,7 @@
 var sh = require('shelljs');
 
 var Shell = function() {
-	var makeTemp = function() {
+	this.mkdir = function () {
 		sh.mkdir('-p', ['/tmp/EN/dev', '/tmp/EN/test', __dirname + '/data/eop']);
 	};
 
@@ -51,12 +51,12 @@ var Shell = function() {
 
 
 	this.train = function () {
-		makeTemp();
+		this.mkdir();
 		runTrain();
 	};
 
 	this.annotate = function () {
-		makeTemp();
+		this.mkdir();
 		runAnnotate();
 	};
 

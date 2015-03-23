@@ -31,6 +31,8 @@ var XML = function () {
 	};
 
 	var saveXML = function (data, callback) {
+		callback.mkdir();
+		
 		fs.writeFile(__dirname + '/data/eop/input.xml', data, function (err) {
 			if (err) {
 				return console.log(err);
