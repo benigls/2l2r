@@ -1,0 +1,18 @@
+[
+	{
+		"hypothesis": "My data is being sold to third-parties.",
+		"question": "Is my data being sold to third-parties?"
+	},
+	{
+		"hypothesis": "Data is transfered by this website not encrypted.",
+		"question": "Is data transfered by this website encrypted?"
+	},
+	{
+		"hypothesis": "This website store my data even when it's no longer needed.",
+		"question": "Does this website store my data even when it's no longer needed?"
+	},
+	{
+		"hypothesis": "Advertisers have access to my data.",
+		"question": "Will advertisers have access to my data?"
+	}
+]
