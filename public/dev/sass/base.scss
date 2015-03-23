@@ -1,0 +1,31 @@
+
+/*-----------------------------------*\
+  $BASE
+\*-----------------------------------*/
+
+.island {
+  font: 100%/1.5 "Roboto", Verdana, sans-serif;
+  color: #3d464d;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  overflow: hidden-x;
+
+  
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+
+
+  .island {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+

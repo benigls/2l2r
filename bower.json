@@ -2,13 +2,19 @@
   "name": "2l2r",
   "version": "0.0.0",
   "homepage": "https://github.com/igop/2l2r",
-  "moduleType": [
-    "node"
-  ],
   "license": "GPL-2.0",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~1.9.1"
+  },
+  "authors": [
+    "Jose San Juan <sanjuanjojo@gmail.com>"
   ]
 }
