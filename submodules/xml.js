@@ -31,7 +31,7 @@ var XML = function () {
 	};
 
 	var saveXML = function (data, callback) {
-		fs.writeFile("/tmp/input.xml", data, function (err) {
+		fs.writeFile(__dirname + '/data/input.xml', data, function (err) {
 			if (err) {
 				return console.log(err);
 			} else {
