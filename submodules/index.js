@@ -24,3 +24,5 @@ var AI = function () {
 		alchemy.text(url, {}, callback);
 	};
 };
+
+module.exports = new AI();
